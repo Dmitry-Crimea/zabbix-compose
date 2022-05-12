@@ -8,12 +8,15 @@
         state: directory
 
     - name: copying zabbix-server file
-      include_tasks: docker-compose-server-amd64.yaml
+      include_tasks: zabbix_package/docker-compose-server-amd64.yaml
       when: "'zabbix_server' in inventory_hostname"
 
     - name: copying zabbix-proxy file
-      include_tasks: docker-compose-proxy-amd64.yaml
+      include_tasks: zabbix_package/docker-compose-proxy-amd64.yaml
       when: "'zabbix_server' in inventory_hostname"
+
+
+
 
 
 

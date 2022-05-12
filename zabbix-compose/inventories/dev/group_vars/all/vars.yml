@@ -1,11 +1,37 @@
 ---
 
-packages:
+packages_ubuntu:
   - curl
   - wget
   - vim
-  - apt-transport-https ca-certificates
+  - apt-transport-https
+  - ca-certificates
+  - gnupg
+  - lsb-release
+
+docker_packages_ubuntu:
+  - docker-ce
+  - docker-ce-cli
+  - containerd.io
+  - docker-compose
+
+docker_packages_centos:
+  - docker-ce
+  - docker-ce-cli
+  - containerd.io
+  - docker-compose-plugin
 
 zabbix:
   - name: zabbix
     dir: /home/it/zabbix
+
+centos_remove_packages:
+  - docker
+  - docker-client
+  - docker-client-latest
+  - docker-common
+  - docker-latest
+  - docker-latest-logrotate
+  - docker-logrotate
+  - docker-engine
+

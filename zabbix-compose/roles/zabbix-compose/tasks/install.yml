@@ -1,11 +1,14 @@
 ---
 
-- name: install ca-certificates and other packages
+- name: install docker & docker-compose
   block:
     - name: "for CentOS"
-      include_tasks: centos7.yml
+      include_tasks: docker_packages/centos7.yml
       when: ansible_os_family == "CentOS" and ansible_pkg_mgr == "yum"
 
     - name: "for Ubuntu"
-      include_tasks: ubuntu20_04.yml
+      include_tasks: docker_packages/ubuntu20_04.yml
       when: ansible_os_family == "Debian" and ansible_pkg_mgr == "apt"
+
+    - name: adding user in docker group
+      shell: sudo usermod -aG docker $USER
