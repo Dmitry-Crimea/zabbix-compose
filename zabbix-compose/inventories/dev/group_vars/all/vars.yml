@@ -1,0 +1,11 @@
+---
+
+packages:
+  - curl
+  - wget
+  - vim
+  - apt-transport-https ca-certificates
+
+zabbix:
+  - name: zabbix
+    dir: /home/it/zabbix

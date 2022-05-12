@@ -1,0 +1,7 @@
+---
+
+- name: copy zabbix-proxy
+  copy:
+    src: docker-compose-proxy-amd64.yaml
+    dest: "{{ item.dir }}"
+  loop: "{{ zabbix }}""

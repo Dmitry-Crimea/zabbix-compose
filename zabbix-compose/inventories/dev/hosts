@@ -1,0 +1,2 @@
+[prod]
+zabbix ansible_host=178.34.157.230 ansible_port=
