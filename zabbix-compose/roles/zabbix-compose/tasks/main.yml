@@ -1,0 +1,7 @@
+---
+
+- name: "PREREQUISITES | prepare to install"
+  import_tasks: prereq.yml
+
+- name: "INSTALL | install docker"
+  import_tasks: install.yml
