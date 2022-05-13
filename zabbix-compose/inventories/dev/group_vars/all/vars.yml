@@ -1,5 +1,9 @@
 ---
 
+home_dir: home
+user_dir: it
+app_dir: zabbix
+
 packages_ubuntu:
   - curl
   - wget
@@ -23,7 +27,7 @@ docker_packages_centos:
 
 zabbix:
   - name: zabbix
-    dir: /home/it/zabbix
+    dir: "/{{home_dir}}/{{ user_dir }}/{{ app_dir }}"
 
 centos_remove_packages:
   - docker
